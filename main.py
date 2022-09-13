@@ -8,3 +8,12 @@ dataframe = pd.DataFrame
 headers = []
 details_header = ['Rk', 'Player', 'Nation', 'Pos', 'Squad', 'Comp', 'Age', 'Born', '90s']
 
+def get_web_req(url_req):
+    url = 'https://fbref.com/en/comps/Big5/' + url_req + '/players/Big-5-European-Leagues-Stats'
+
+    page = requests.get(url).text
+
+    # Creating BeautifulSoup object
+    soup = BeautifulSoup(page, 'html.parser')
+
+    return soup
