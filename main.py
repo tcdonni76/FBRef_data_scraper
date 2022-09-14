@@ -9,6 +9,7 @@ headers = []
 details_header = ['Rk', 'Player', 'Nation', 'Pos', 'Squad', 'Comp', 'Age', 'Born', '90s']
 
 def get_web_req(url_req):
+    # use 'https://fbref.com/en/comps/Big5/2021-2022/' + url_req + '/players/2021-2022-Big-5-European-Leagues-Stats' for previous season stats
     url = 'https://fbref.com/en/comps/Big5/' + url_req + '/players/Big-5-European-Leagues-Stats'
 
     page = requests.get(url).text
